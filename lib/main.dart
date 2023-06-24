@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:movie_finder/features/movie_flow/movie_flow.dart';
 import 'package:movie_finder/theme/custom_theme.dart';
 
 void main() {
@@ -15,23 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'Movie Finder',
       darkTheme: CustomTheme.darkTheme(context),
       themeMode: ThemeMode.dark,
-      home: const MyHomePage(),
+      home: const MovieFlow(),
     );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key});
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-        // This trailing comma makes auto-formatting nicer for build methods.
-        );
   }
 }
