@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:movie_finder/core/widgets/primary_button.dart';
+import 'package:movie_finder/features/movie_flow/result/result_screen.dart';
 
 class YearsBackScreen extends StatefulWidget {
   const YearsBackScreen(
@@ -62,7 +63,10 @@ class _YearsBackScreenState extends State<YearsBackScreen> {
               label: '${yearsBack.ceil()}',
             ),
             const Spacer(),
-            PrimaryButton(onPressed: () {}, text: 'Continue'),
+            PrimaryButton(
+                onPressed: () =>
+                    Navigator.of(context).push(ResultScreen.route()),
+                text: 'Continue'),
           ],
         ),
       ),
